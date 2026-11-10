@@ -1,0 +1,46 @@
+name: Bug report or feedback
+description: Tell us what went wrong, or what you'd like to see
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. Issues on GitHub are public, so please don't post personal information
+        such as private file names.
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 24H2"
+  - type: dropdown
+    id: sac
+    attributes:
+      label: Smart App Control
+      description: "Windows Security > App & browser control > Smart App Control"
+      options:
+        - "Off"
+        - "On"
+        - "Evaluation"
+        - "Not sure"
+  - type: dropdown
+    id: admin
+    attributes:
+      label: Did you allow administrator rights when it started?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead? Screenshots are welcome.
+    validations:
+      required: true
